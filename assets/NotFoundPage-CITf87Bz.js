@@ -1,0 +1,1 @@
+import{t as e}from"./compass-BcBdSIM5.js";import{O as t,Z as n,lt as r}from"./ui-DAZYcoAf.js";var i=r();function a(){return(0,i.jsx)(t,{size:`lg`,headingLevel:1,icon:e,title:`ページが見つかりません`,description:`リンクが古いか、まだ用意されていない画面です。`,action:(0,i.jsx)(n,{to:`/`,variant:`primary`,children:`今日へ戻る`})})}export{a as default};

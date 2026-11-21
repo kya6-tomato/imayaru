@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>いまやる</title>
+    <meta name="description" content="開いて5秒で「今日やること」と「締切までの残り時間」がわかる、大学生のための課題・やること管理" />
+    <meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0c0c0e" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="いまやる" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" href="/imayaru/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/imayaru/icons/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/imayaru/icons/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap"
+    />
+    <script>
+      // 起動直後のちらつき防止：保存済みのテーマを先に反映（正は Setting 'theme'。src/app/theme.ts）
+      (function () {
+        var pref = 'system';
+        try {
+          pref = localStorage.getItem('imayaru:theme') || 'system';
+        } catch (e) {}
+        var dark = pref === 'dark' || (pref === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        var t = dark ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.style.colorScheme = t;
+      })();
+    </script>
+    <script type="module" crossorigin src="/imayaru/assets/index-CY9LWatH.js"></script>
+    <link rel="modulepreload" crossorigin href="/imayaru/assets/rolldown-runtime-COiEfhsA.js">
+    <link rel="modulepreload" crossorigin href="/imayaru/assets/db-jNGriWkV.js">
+    <link rel="modulepreload" crossorigin href="/imayaru/assets/preload-helper-Bn9VbYO8.js">
+    <link rel="modulepreload" crossorigin href="/imayaru/assets/ui-DAZYcoAf.js">
+    <link rel="stylesheet" crossorigin href="/imayaru/assets/index-CwjXSNXv.css">
+  <link rel="manifest" href="/imayaru/manifest.webmanifest"></head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="padding: 24px; font-family: sans-serif">いまやる を使うには JavaScript を有効にしてください。</p>
+    </noscript>
+  </body>
+</html>
